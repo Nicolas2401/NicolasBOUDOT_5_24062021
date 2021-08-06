@@ -14,6 +14,8 @@
 
     Header
 
+    Cards
+
     Utilitaires
 
 */
@@ -60,11 +62,54 @@ a {
         text-decoration: none;
     }
 
+/* Forms */
+input:read-only {
+    outline: none;
+}
+
+input.input-error {
+    color: var(--orinoco-orange);
+    border: 1px solid var(--orinoco-orange);
+}
+
+    input.input-error::placeholder {
+        color: var(--orinoco-orange);
+    }
+
+
+.label-error {
+    color: var(--orinoco-orange);
+}
 
 /* Header */
 header {
     background-color: var(--orinoco-rose);
 }
+
+
+
+/* Cards */
+
+/* Card-produits */
+
+/* Card-cart */
+.card-cart {
+    border-bottom: 1px solid var(--gray);
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+
+.cart-cart__total {
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
+.card-cart__text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+    
 
 
 /* Utilitaires */

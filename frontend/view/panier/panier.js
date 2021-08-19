@@ -113,6 +113,16 @@ async function setDataInCartTemplateFull() {
         cloneCardCart.querySelector(".card-cart__price").value = productById.price / 100 + "€";
         cloneCardCart.querySelector(".card-cart__subtotal").value = calcSubTotalPrice(productById.price, product.quantity) + "€";
 
+        //Personnalisation des id pour chaque élement
+        cloneCardCart.querySelector(".card-cart__select-color").id += "-" + productsInStorage.indexOf(product);
+        cloneCardCart.querySelector(".card-cart__select-color").previousElementSibling.htmlFor = cloneCardCart.querySelector(".card-cart__select-color").id;
+        cloneCardCart.querySelector(".card-cart__quantity").id += "-" + productsInStorage.indexOf(product);
+        cloneCardCart.querySelector(".card-cart__quantity").previousElementSibling.htmlFor = cloneCardCart.querySelector(".card-cart__quantity").id;
+        cloneCardCart.querySelector(".card-cart__price").id += "-" + productsInStorage.indexOf(product);
+        cloneCardCart.querySelector(".card-cart__price").previousElementSibling.htmlFor = cloneCardCart.querySelector(".card-cart__price").id;
+        cloneCardCart.querySelector(".card-cart__subtotal").id += "-" + productsInStorage.indexOf(product);
+        cloneCardCart.querySelector(".card-cart__subtotal").previousElementSibling.htmlFor = cloneCardCart.querySelector(".card-cart__subtotal").id;
+
         //Récupère toutes les couleurs disponible du produit
         for (const color of productById.colors) {
             //Pour chaque couleur disponible, on crée un élément <option>
@@ -122,7 +132,7 @@ async function setDataInCartTemplateFull() {
 
             //Récupère le choix de le couleur pour la mettre en selected
             if (color == product.color) {
-                option.setAttribute("selected", true);
+                option.setAttribute("selected", "");
             }
 
             //On les ajoutes dans le DOM

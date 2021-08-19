@@ -56,14 +56,14 @@
                                                     <form>
                                                         <div class="form-group">
                                                             <label for="card-cart__select-color" class="h6">Couleurs</label>
-                                                            <select name="card-cart__select-color" class="card-cart__select-color form-control">
+                                                            <select id="card-cart__select-color" name="card-cart__select-color" class="card-cart__select-color form-control">
                                                                 <!-- Injection des options depuis panier.js -->
                                                                 <!-- <option value="{product.color}">{product.color}</option> -->
                                                             </select>
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="card-cart__quantity" class="h6">Quantité</label>
-                                                            <input type="number" name="card-cart__quantity" class="card-cart__quantity form-control" min="1" value="1">
+                                                            <input type="number" id="card-cart__quantity" name="card-cart__quantity" class="card-cart__quantity form-control" min="1" value="1">
                                                         </div>
                                                     </form>
                                                 </div>
@@ -71,7 +71,7 @@
                                                     <form>
                                                         <div class="form-group">
                                                             <label for="card-cart__price" class="h6">Prix</label>
-                                                            <input type="text" name="card-cart__price" class="card-cart__price form-control-plaintext color-orinoco-violet h3" readonly value="499€">
+                                                            <input type="text" id="card-cart__price" name="card-cart__price" class="card-cart__price form-control-plaintext color-orinoco-violet h3" readonly value="499€">
                                                         </div>
                                                     </form>
                                                 </div>
@@ -79,7 +79,7 @@
                                                     <form>
                                                         <div class="form-group">
                                                             <label for="card-cart__subtotal" class="h6">Sous-total</label>
-                                                            <input type="text" name="card-cart__subtotal" class="card-cart__subtotal form-control-plaintext color-orinoco-violet h3" readonly value="2499€">
+                                                            <input type="text" id="card-cart__subtotal" name="card-cart__subtotal" class="card-cart__subtotal form-control-plaintext color-orinoco-violet h3" readonly value="2499€">
                                                         </div>
                                                     </form>
                                                 </div>
@@ -100,7 +100,7 @@
                         <div class="panier-plein__formulaire jumbotron">
                             <h2 class="text-center mb-4">Formulaire de commande :</h2>
 
-                            <form action="">
+                            <form>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="inputFirstName">Prénom</label>
